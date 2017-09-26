@@ -35,6 +35,7 @@ public class RSA {
             /**
              * 执行签名
              */
+            //使用私钥加密
             PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(rsaPrivateKey.getEncoded());
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             PrivateKey privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec);

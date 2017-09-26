@@ -116,7 +116,7 @@ public class SignDemo3 {
             info.setChain(chain);
             info.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
             info.setDigestAlgorithm(DigestAlgorithms.SHA1);
-            info.setFieldName("sig1");
+//            info.setFieldName("sig1");
             info.setImagePath(image_path);
             info.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
 

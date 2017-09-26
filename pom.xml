@@ -8,7 +8,7 @@
     <groupId>com.liumapp.signHelper</groupId>
     <artifactId>signHelper</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -49,12 +49,12 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.49</version>
+            <version>1.54</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpkix-jdk15on</artifactId>
-            <version>1.49</version>
+            <version>1.54</version>
         </dependency>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
