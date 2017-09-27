@@ -27,7 +27,7 @@ public class ImageDemo {
         PdfStamper stamper = null;
         try {
             PdfReader reader = new PdfReader(dataPath + "/test.pdf");
-            stamper = new PdfStamper(reader , new FileOutputStream(dataPath + "/output.pdf"));
+            stamper = new PdfStamper(reader , new FileOutputStream(dataPath + "/output_onlyImage.pdf"));
             PdfContentByte over = stamper.getOverContent(1);
             Image image = Image.getInstance(dataPath +"/sign.png");
             image.setAbsolutePosition(0 , 0);

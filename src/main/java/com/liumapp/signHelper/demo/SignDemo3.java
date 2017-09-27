@@ -1,6 +1,7 @@
 package com.liumapp.signHelper.demo;
 
 import com.itextpdf.text.Image;
+import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfStamper;
@@ -29,7 +30,7 @@ public class SignDemo3 {
 
     public static final char[] PASSWORD = "111111".toCharArray();//keystory密码
 
-//    public static final char[] PASSWORD = null;
+    //    public static final char[] PASSWORD = null;
 
     /**
      * 单多次签章通用
@@ -63,6 +64,13 @@ public class SignDemo3 {
                 appearance.setCertificationLevel(signatureInfo.getCertificationLevel());
                 //设置图章的显示方式，如下选择的是只显示图章（还有其他的模式，可以图章和签名描述一同显示）
                 appearance.setRenderingMode(signatureInfo.getRenderingMode());
+                /**
+                 * 粘贴图片
+                 */
+                PdfContentByte over = stamper.getOverContent(1);
+                image.setAbsolutePosition(0 , 0);
+                image.scaleToFit(300 , 109);
+                over.addImage(image);
                 // 摘要算法
                 ExternalDigest digest = new BouncyCastleDigest();
                 // 签名算法
