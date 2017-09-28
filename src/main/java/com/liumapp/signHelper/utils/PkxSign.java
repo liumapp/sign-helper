@@ -10,13 +10,6 @@ import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfStamper;
-import com.itextpdf.text.pdf.security.BouncyCastleDigest;
-import com.itextpdf.text.pdf.security.DigestAlgorithms;
-import com.itextpdf.text.pdf.security.ExternalDigest;
-import com.itextpdf.text.pdf.security.ExternalSignature;
-import com.itextpdf.text.pdf.security.MakeSignature;
-import com.itextpdf.text.pdf.security.PrivateKeySignature;
-import com.itextpdf.text.pdf.security.MakeSignature.CryptoStandard;
 
 import java.security.*;
 import java.security.cert.Certificate;
@@ -151,9 +144,9 @@ public class PkxSign {
         appearance.setLocation("FuZhou");
         appearance.setVisibleSignature(new Rectangle(0, 300, 300, 109), 1, "sig");
         // Creating the signature
-        ExternalSignature pks = new PrivateKeySignature(pk, DigestAlgorithms.SHA256, provider.getName());
-        ExternalDigest digest = new BouncyCastleDigest();
-        MakeSignature.signDetached(appearance, digest, pks, chain, null, null, null, 0, CryptoStandard.CMS);
+//        ExternalSignature pks = new PrivateKeySignature(pk, DigestAlgorithms.SHA256, provider.getName());
+//        ExternalDigest digest = new BouncyCastleDigest();
+//        MakeSignature.signDetached(appearance, digest, pks, chain, null, null, null, 0, CryptoStandard.CMS);
     }
 
     public static void main(String[] args) {

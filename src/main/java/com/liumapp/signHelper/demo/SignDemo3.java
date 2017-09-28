@@ -24,7 +24,7 @@ public class SignDemo3 {
 
     private static final String image_path = "/usr/local/tomcat/project/pfxSigner/data/sign.png";
 
-    private static final String source_pdf = "/usr/local/tomcat/project/pfxSigner/data/test.pdf";
+    private static final String source_pdf = "/usr/local/tomcat/project/pfxSigner/data/test_tmp.pdf";
 
     private static final String output_pdf = "/usr/local/tomcat/project/pfxSigner/data/output.pdf";
 
@@ -57,7 +57,7 @@ public class SignDemo3 {
                 appearance.setReason(signatureInfo.getReason());
                 appearance.setLocation(signatureInfo.getLocation());
                 //设置签名的签名域名称，多次追加签名的时候，签名预名称不能一样，图片大小受表单域大小影响（过小导致压缩）
-//                appearance.setVisibleSignature(signatureInfo.getFieldName());
+                appearance.setVisibleSignature(signatureInfo.getFieldName());
                 //读取图章图片
                 Image image = Image.getInstance(signatureInfo.getImagePath());
                 appearance.setSignatureGraphic(image);
@@ -124,7 +124,7 @@ public class SignDemo3 {
             info.setChain(chain);
             info.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
             info.setDigestAlgorithm(DigestAlgorithms.SHA1);
-//            info.setFieldName("sig1");
+            info.setFieldName("mySig");
             info.setImagePath(image_path);
             info.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
 
