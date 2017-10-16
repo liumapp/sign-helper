@@ -20,13 +20,15 @@ import java.security.cert.Certificate;
  */
 public class SignDemo3 {
 
-    private static final String cert_path = "/usr/local/tomcat/project/pfxSigner/data/liumapp.keystore";
+    private static final String cert_path = "/usr/local/tomcat/project/cerebrate/pfxSigner/data/liumapp.keystore";
 
-    private static final String image_path = "/usr/local/tomcat/project/pfxSigner/data/sign.png";
+    private static final String image_path = "/usr/local/tomcat/project/cerebrate/pfxSigner/data/sign.png";
 
-    private static final String source_pdf = "/usr/local/tomcat/project/pfxSigner/data/test_tmp.pdf";
+    private static final String source_pdf = "/usr/local/tomcat/project/cerebrate/pfxSigner/data/test_tmp.pdf";
 
-    private static final String output_pdf = "/usr/local/tomcat/project/pfxSigner/data/output.pdf";
+    private static final String output_pdf = "/usr/local/tomcat/project/cerebrate/pfxSigner/data/output.pdf";
+
+    private static final String datasource = "/usr/local/tomcat/project/cerebrate/pfxSigner/data";
 
     public static final char[] PASSWORD = "111111".toCharArray();//keystory密码
 
@@ -104,6 +106,7 @@ public class SignDemo3 {
     }
 
     public static void main(String[] args) {
+
         try {
             SignDemo3 app = new SignDemo3();
             //将证书文件放入指定路径，并读取keystore ，获得私钥和证书链
@@ -117,16 +120,39 @@ public class SignDemo3 {
             String src = source_pdf;
 
             //封装签章信息
-            SignatureInfo info = new SignatureInfo();
-            info.setReason("理由");
-            info.setLocation("位置");
-            info.setPk(pk);
-            info.setChain(chain);
-            info.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
-            info.setDigestAlgorithm(DigestAlgorithms.SHA1);
-            info.setFieldName("mySig");
-            info.setImagePath(image_path);
-            info.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
+//            SignatureInfo info1 = new SignatureInfo();
+//            info1.setReason("理由1");
+//            info1.setLocation("位置1");
+//            info1.setPk(pk);
+//            info1.setChain(chain);
+//            info1.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
+//            info1.setDigestAlgorithm(DigestAlgorithms.SHA1);
+//            info1.setFieldName("mySig1");
+//            info1.setImagePath(image_path);
+//            info1.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
+
+
+            SignatureInfo info2 = new SignatureInfo();
+            info2.setReason("理由2");
+            info2.setLocation("位置2");
+            info2.setPk(pk);
+            info2.setChain(chain);
+            info2.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
+            info2.setDigestAlgorithm(DigestAlgorithms.SHA1);
+            info2.setFieldName("mySig2");
+            info2.setImagePath(datasource + "/sign2.png");
+            info2.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
+
+//            SignatureInfo info3 = new SignatureInfo();
+//            info3.setReason("理由3");
+//            info3.setLocation("位置3");
+//            info3.setPk(pk);
+//            info3.setChain(chain);
+//            info3.setCertificationLevel(PdfSignatureAppearance.NOT_CERTIFIED);
+//            info3.setDigestAlgorithm(DigestAlgorithms.SHA1);
+//            info3.setFieldName("mySig3");
+//            info3.setImagePath(datasource + "/sign3.png");
+//            info3.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
 
 //            SignatureInfo info1 = new SignatureInfo();
 //            info1.setReason("理由1");
@@ -139,11 +165,14 @@ public class SignDemo3 {
 //            info1.setImagePath(app.getClass().getResource("/template/yinzhang.png").getPath());
 //            info1.setRenderingMode(PdfSignatureAppearance.RenderingMode.GRAPHIC);
 
-            app.sign(src, output_pdf, info);
+//            app.sign(src, output_pdf, info1);
+            app.sign(src, output_pdf, info2);
+//            app.sign(src, output_pdf, info3);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
     }
 
 }
