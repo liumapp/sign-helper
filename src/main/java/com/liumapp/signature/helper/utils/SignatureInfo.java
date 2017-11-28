@@ -1,4 +1,4 @@
-package com.liumapp.signHelper.utils;
+package com.liumapp.signature.helper.utils;
 
 import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.security.MakeSignature;

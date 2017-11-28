@@ -1,4 +1,4 @@
-package com.liumapp.signHelper.rsa;
+package com.liumapp.signature.helper.rsa;
 
 import org.apache.commons.codec.binary.Hex;
 import org.springframework.stereotype.Component;

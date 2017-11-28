@@ -1,4 +1,4 @@
-package com.liumapp.signHelper.demo;
+package com.liumapp.signature.helper.demo;
 
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
