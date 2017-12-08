@@ -1,4 +1,4 @@
-package com.liumapp.signature.helper.demo;
+package com.liumapp.signature.pdf.helper.demo;
 
 
 import com.itextpdf.text.Image;
@@ -8,7 +8,6 @@ import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.security.*;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,7 +19,6 @@ import java.security.cert.Certificate;
  * E-mail:liumapp.com@gmail.com
  * home-page:http://www.liumapp.com
  */
-@Component
 public class SignDemo {
 
     public static String dataPath = "/usr/local/tomcat/project/pfxSigner/data";

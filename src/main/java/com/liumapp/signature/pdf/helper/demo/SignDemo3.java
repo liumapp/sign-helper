@@ -1,4 +1,4 @@
-package com.liumapp.signature.helper.demo;
+package com.liumapp.signature.pdf.helper.demo;
 
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfContentByte;
@@ -6,7 +6,7 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.security.*;
-import com.liumapp.signature.helper.utils.SignatureInfo;
+import com.liumapp.signature.pdf.helper.utils.SignatureInfo;
 
 import java.io.*;
 import java.security.KeyStore;

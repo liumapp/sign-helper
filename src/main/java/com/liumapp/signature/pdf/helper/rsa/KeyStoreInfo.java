@@ -1,13 +1,11 @@
-package com.liumapp.signature.helper.rsa;
+package com.liumapp.signature.pdf.helper.rsa;
 
-import org.springframework.stereotype.Component;
 
 /**
  * Created by liumapp on 9/28/17.
  * E-mail:liumapp.com@gmail.com
  * home-page:http://www.liumapp.com
  */
-@Component
 public class KeyStoreInfo {
 
     

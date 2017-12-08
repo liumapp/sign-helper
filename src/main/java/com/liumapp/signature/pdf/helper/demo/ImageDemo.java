@@ -1,12 +1,10 @@
-package com.liumapp.signature.helper.demo;
+package com.liumapp.signature.pdf.helper.demo;
 
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import javax.swing.text.Document;
 import java.io.FileOutputStream;
@@ -17,7 +15,6 @@ import java.io.IOException;
  * E-mail:liumapp.com@gmail.com
  * home-page:http://www.liumapp.com
  */
-@Component
 public class ImageDemo {
 
     public static String dataPath = "/usr/local/tomcat/project/pfxSigner/data";

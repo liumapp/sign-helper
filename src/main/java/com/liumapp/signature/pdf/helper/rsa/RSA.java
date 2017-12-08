@@ -1,7 +1,6 @@
-package com.liumapp.signature.helper.rsa;
+package com.liumapp.signature.pdf.helper.rsa;
 
 import org.apache.commons.codec.binary.Hex;
-import org.springframework.stereotype.Component;
 
 import java.security.*;
 import java.security.interfaces.RSAPrivateKey;
@@ -15,7 +14,6 @@ import java.security.spec.X509EncodedKeySpec;
  * E-mail:liumapp.com@gmail.com
  * home-page:http://www.liumapp.com
  */
-@Component
 public class RSA {
 
     private static String src = "liumapp rsa";

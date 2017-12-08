@@ -1,4 +1,4 @@
-package com.liumapp.signature.helper.utils;
+package com.liumapp.signature.pdf.helper.utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -11,9 +11,7 @@ import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfSignatureAppearance;
 import com.itextpdf.text.pdf.PdfStamper;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Sign{
 	
 	// 证书密码
@@ -38,7 +36,7 @@ public class Sign{
 		System.out.println("done!!!");
 	}
 	
-	public static void sign() throws Exception{
+	public static void sign() throws Exception {
 
 		KeyStore ks = KeyStore.getInstance("jks");
 		ks.load(new FileInputStream(cert_path), cert_pwd.toCharArray());
