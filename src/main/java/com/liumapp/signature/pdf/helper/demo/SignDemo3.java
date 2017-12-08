@@ -36,12 +36,6 @@ public class SignDemo3 {
 
     /**
      * 单多次签章通用
-     * @param src
-     * @param target
-     * @param signatureInfos
-     * @throws java.security.GeneralSecurityException
-     * @throws java.io.IOException
-     * @throws com.itextpdf.text.DocumentException
      */
     public void sign(String src, String target, SignatureInfo... signatureInfos){
         InputStream inputStream = null;
